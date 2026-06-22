@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "montseerrat", sans-serif;
+
+
+}
+
+body {
+
+    background-color: #0f0f1e;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.logo {
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+}
+
+header nav ul {
+
+    display: flex;
+    gap: 48px;
+}
+
+header nav ul li {
+
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+
+}
+
+header nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.2s ease;
+}
+
+header nav ul li:hover::after {
+    width: 100%;
+}
+
+.box {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
+    overflow: hidden;
+}
+
+.box::before {
+
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 247, 255, 0.2) 0%, rgba(15, 15, 30, 0) 70%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+}
+
+.list {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
+}
+
+.facul-img {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    right: 20%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facul-img img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+
+
+}
+
+
+
+.curso-img {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curso-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+
+
+}
+
+.content {
+    width: 65%;
+    padding-right: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+}
+
+.Faculdade-tag {
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #00f7ff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    opacity: 0;
+
+
+}
+
+.description {
+
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    font-size: 1.1rem;
+    color: #b8b8d0;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.description-cdd {
+
+
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    font-size: 1.1rem;
+    color: #b8b8d0;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.arrows {
+
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%);
+    z-index: 5;
+}
+
+.arrow-btn {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 247, 255, 0.3);
+}
+
+.arrow-btn:hover {
+    background-color: rgba(0, 247, 255, 0.3);
+    border-color: #00f7ff;
+
+}
+
+
+
+/*.btn-contatos{
+display: block;
+  padding: 1px 10px;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+*/
+#btnContatos {
+  position: absolute;
+  bottom: 20px;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #1f1f3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 60px;   /* melhor que absolute para popup */
+  right: 20px;
+  background: #0f0f1e;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  color: white;
+  z-index: 9999;
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+}
+
+.git-link {
+    position: absolute;
+    top: 3.2%;
+    right: -46%;
+    width: 100%;
+    justify-content: space-between;
+    transform: translate(40%);
+    font-family: "Orbitron";
+    cursor: pointer;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.Faculdade-link {
+
+    position: absolute;
+    top: 70%;
+    right: -20%;
+    width: 100%;
+    justify-content: space-between;
+    transform: translate(40%);
+}
+
+.cdd-link {
+
+    position: absolute;
+    top: 70%;
+    right: -20%;
+    width: 100%;
+    justify-content: space-between;
+    transform: translate(40%);
+
+}
+
+.indicators {
+
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 5;
+}
+
+.numbers {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.dots {
+
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+
+    width: 40px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+
+}
+
+.dot.active {
+
+    background-color: #00f7ff;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+}
+
+
+/*.tech-form{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.form{
+position: absolute;
+border:1px solid rgba(0, 247, 255, 0.2);
+border-radius: 0 50% 50% 50%;
+transform: rotate(45deg)
+}
+.form:nth-child(1){
+    width: 100px;
+    height: 100px;
+    top: 15%;
+    left: 10%;
+
+
+}*/

@@ -15,7 +15,6 @@ let timer;
 
 
 
-
 /*function update(direction) {
 
     document.querySelector('.item.active').classList.remove('active')

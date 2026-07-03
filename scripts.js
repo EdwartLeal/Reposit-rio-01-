@@ -89,16 +89,16 @@ nextButton.addEventListener('click', () => {
 
 })
 
-const btnContatos = document.getElementById("btnContatos");
+const contatosBtn = document.getElementById("contatosBtn");
 const popup = document.getElementById("popup");
 const overlay = document.getElementById("overlay");
 
-btnContatos.addEventListener("click", () => {
-  popup.style.display = "block";
-  overlay.style.display = "block";
+contatosBtn.addEventListener("click", () => {
+    popup.style.display = "block";
+    overlay.style.display = "block";
 });
 
 overlay.addEventListener("click", () => {
-  popup.style.display = "none";
-  overlay.style.display = "none";
+    popup.style.display = "none";
+    overlay.style.display = "none";
 });
